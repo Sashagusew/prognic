@@ -1,17 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:prognic/TestProbnic.dart';
 
-void main(){
-  runApp(MyApp());
+void main() {
+  runApp(MyApp()); // Запускает
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  MyApp({key key}) : super(key: key);
 
+@override
+_MyAppState creatState() => _MyAppState();
+}
+
+class_MyAppState extends State<MyApp> {
   @override
+  Widget @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:TestProbnic()
+      home: Scaffold(
+        dody: SafeArea(
+          chield: Column(
+            children: [
+              CircleAvatar(
+                backgraundImage: NetworkImage("https://nashkomp.ru/wp-content/uploads/2020/11/slesh.jpg")
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
